@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	irrlichtMt
-DISTVERSION=	g20210409
+DISTVERSION=	g20210413
 CATEGORIES=	x11-toolkits graphics
 MASTER_SITES=	https://github.com/minetest/irrlicht/archive/refs/heads/
 DISTNAME=	master
@@ -21,7 +21,7 @@ DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	minetest
 GH_PROJECT=	minetest
-GH_TAGNAME=	aa294a810782bb026957e0c38daf0825db9ac2f4
+GH_TAGNAME=	5bdcc7eb4f6c55cc7f5ed0f0b3163d5bb986fb86
 
 USE_GL=		gl
 USE_XORG=	x11 xxf86vm
