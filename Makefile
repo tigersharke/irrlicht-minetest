@@ -1,5 +1,5 @@
 PORTNAME=	irrlichtMt
-DISTVERSION=	g20210421
+DISTVERSION=	g20210422
 CATEGORIES=	x11-toolkits graphics
 MASTER_SITES=	https://github.com/minetest/irrlicht/archive/refs/heads/
 DISTNAME=	master
@@ -19,7 +19,7 @@ DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	minetest
 GH_PROJECT=	minetest
-GH_TAGNAME=	3152a6cc463add40e0369962485c9479c4b27490
+GH_TAGNAME=	2461e899ba9046d406248216d92f5ac11a02e6d2
 
 USE_GL=		gl
 USE_XORG=	x11 xxf86vm
