@@ -10,7 +10,7 @@ COMMENT=	High performance realtime 3D engine - minetest fork
 
 LICENSE=	ZLIB
 
-LIB_DEPENDS=	libpng.so:graphics/png
+LIB_DEPENDS=	libpng.so:graphics/png libGLU.so:graphics/libGLU
 
 USES=		alias cmake compiler:c11 dos2unix gl jpeg xorg zip
 
@@ -21,7 +21,7 @@ GH_ACCOUNT=	minetest
 GH_PROJECT=	minetest
 GH_TAGNAME=	393793f28afa15641533f687f3a242e32a052fbc
 
-USE_GL=		gl
+USE_GL=		gl glu
 USE_XORG=	x11 xxf86vm
 USE_LDCONFIG=	yes
 
