@@ -10,9 +10,9 @@ COMMENT=	High performance realtime 3D engine - minetest fork
 
 LICENSE=	ZLIB
 
-LIB_DEPENDS=	libpng.so:graphics/png libGLU.so:graphics/libGLU
+LIB_DEPENDS=	libpng.so:graphics/png
 
-USES=		alias cmake compiler:c11 dos2unix gl jpeg xorg zip
+USES=		alias cmake compiler:c11 dos2unix jpeg gl xorg zip
 
 DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
 
@@ -21,26 +21,19 @@ GH_ACCOUNT=	minetest
 GH_PROJECT=	minetest
 GH_TAGNAME=	393793f28afa15641533f687f3a242e32a052fbc
 
+CMAKE_ARGS=	-DCMAKE_BUILD_TYPE="MinSizeRel" \
+		-DCUSTOM_MANDIR="${PREFIX}/man"
+
 USE_GL=		gl glu
 USE_XORG=	x11 xxf86vm
 USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/irrlicht-master
 
-# FYI zlib is part of FreeBSD base
-# https://www.freebsd.org/news/status/report-2019-07-2019-09/#Kernel-ZLIB-Update
-#
-# Notes from upstream readme
-#    zlib, libPNG, libJPEG
-#    OpenGL
-#    or on mobile: OpenGL ES (can be optionally enabled on desktop too)
-#    on Unix: X11
-#--
-#
-# Periodically revisit:
-# Since fork need to discover if dos2unix is still required as devs are linux oriented.
-#
-# Files created in DOS/Windows use carriage return (\r) and line feed (\n) for line endings.
-# However, files in Unix/Linux solely use line feed.
-#
+#OPTIONS_DEFINE= EXAMPLES
+
+#EXAMPLES_CMAKE_BOOL=	BUILD_EXAMPLES
+#Provided in directory below, right after make (prior to install), so need more mechanism to build and install them
+#x11-toolkits/irrlicht-minetest/work/irrlicht-master/examples
+
 .include <bsd.port.mk>
