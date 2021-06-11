@@ -1,7 +1,6 @@
 PORTNAME=	irrlichtMt
 DISTVERSION=	g20210524
 CATEGORIES=	x11-toolkits graphics
-MASTER_SITES=	https://github.com/minetest/irrlicht/archive/refs/heads/
 DISTNAME=	master
 DIST_SUBDIR=	${PORTNAME}
 
@@ -18,7 +17,7 @@ DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
 
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	minetest
-GH_PROJECT=	minetest
+GH_PROJECT=	irrlicht
 GH_TAGNAME=	393793f28afa15641533f687f3a242e32a052fbc
 
 CMAKE_ARGS=	-DCMAKE_BUILD_TYPE="MinSizeRel" \
