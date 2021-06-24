@@ -11,6 +11,7 @@ LICENSE=	ZLIB
 
 LIB_DEPENDS=	libpng.so:graphics/png
 
+#USES=		alias cmake compiler:c11 dos2unix jpeg gl
 USES=		alias cmake compiler:c11 dos2unix jpeg gl xorg
 
 DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
@@ -18,10 +19,11 @@ DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	minetest
 GH_PROJECT=	irrlicht
-GH_TAGNAME=	b43f9b96e0c2f9b07e597bc71e39c182e87fdc43
+GH_TAGNAME=	78d1a3f73e55b84b612b8c9a38b50fd0063394f4
 
 CMAKE_ARGS=	-DCMAKE_BUILD_TYPE="MinSizeRel" \
-		-DCUSTOM_MANDIR="${PREFIX}/man"
+		-DCUSTOM_MANDIR="${PREFIX}/man" \
+		-DOPENGL_GL_PREFERENCE=GLVND
 
 USE_GL=		gl glu
 USE_XORG=	x11 xxf86vm
