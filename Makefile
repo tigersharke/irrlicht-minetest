@@ -11,7 +11,6 @@ LICENSE=	ZLIB
 
 LIB_DEPENDS=	libpng.so:graphics/png
 
-#USES=		alias cmake compiler:c11 dos2unix jpeg gl
 USES=		alias cmake compiler:c11 dos2unix jpeg gl xorg
 
 DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
