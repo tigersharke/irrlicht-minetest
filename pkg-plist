@@ -33,7 +33,6 @@ include/irrlichtmt/IBillboardSceneNode.h
 include/irrlichtmt/IBillboardTextSceneNode.h
 include/irrlichtmt/IBoneSceneNode.h
 include/irrlichtmt/ICameraSceneNode.h
-include/irrlichtmt/IColladaMeshWriter.h
 include/irrlichtmt/IContextManager.h
 include/irrlichtmt/ICursorControl.h
 include/irrlichtmt/IDummyTransformationSceneNode.h
@@ -137,8 +136,6 @@ include/irrlichtmt/IVideoDriver.h
 include/irrlichtmt/IVideoModeList.h
 include/irrlichtmt/IVolumeLightSceneNode.h
 include/irrlichtmt/IWriteFile.h
-include/irrlichtmt/IXMLReader.h
-include/irrlichtmt/IXMLWriter.h
 include/irrlichtmt/IrrCompileConfig.h
 include/irrlichtmt/IrrlichtDevice.h
 include/irrlichtmt/Keycodes.h
@@ -178,7 +175,6 @@ include/irrlichtmt/irrMath.h
 include/irrlichtmt/irrString.h
 include/irrlichtmt/irrTypes.h
 include/irrlichtmt/irrUString.h
-include/irrlichtmt/irrXML.h
 include/irrlichtmt/irrlicht.h
 include/irrlichtmt/irrpack.h
 include/irrlichtmt/irrunpack.h

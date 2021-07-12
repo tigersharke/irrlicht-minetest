@@ -1,5 +1,6 @@
 PORTNAME=	irrlichtMt
-DISTVERSION=	g20210630
+DISTVERSION=	g20210712
+#DISTVERSION=	g20210630
 CATEGORIES=	x11-toolkits graphics
 DISTNAME=	${PORTNAME}-${GH_TAGNAME}
 DIST_SUBDIR=	${PORTNAME}
@@ -18,7 +19,7 @@ DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	minetest
 GH_PROJECT=	irrlicht
-GH_TAGNAME=	d62e0424f253dfd62fde93232452d8b377197191
+GH_TAGNAME=	2cc1a4e20a1cf3fe8bf907219663849d9e8d4372
 
 CMAKE_ARGS=	-DCMAKE_BUILD_TYPE="MinSizeRel" \
 		-DCUSTOM_MANDIR="${PREFIX}/man" \
@@ -35,5 +36,8 @@ WRKSRC=		${WRKDIR}/irrlicht-${GH_TAGNAME}
 #EXAMPLES_CMAKE_BOOL=	BUILD_EXAMPLES
 #Provided in directory below, right after make (prior to install), so need more mechanism to build and install them
 #x11-toolkits/irrlicht-minetest/work/irrlicht-master/examples
+
+#valid arguments are:
+#c++11-lib c++11-lang c++14-lang c++17-lang c11 features openmp env nestedfct c++0x gcc-c++11-lib
 
 .include <bsd.port.mk>
