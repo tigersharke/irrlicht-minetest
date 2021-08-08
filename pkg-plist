@@ -146,6 +146,7 @@ include/irrlichtmt/leakHunter.h
 include/irrlichtmt/line2d.h
 include/irrlichtmt/line3d.h
 include/irrlichtmt/matrix4.h
+include/irrlichtmt/mt_opengl.h
 include/irrlichtmt/path.h
 include/irrlichtmt/plane3d.h
 include/irrlichtmt/position2d.h
