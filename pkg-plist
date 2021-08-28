@@ -87,6 +87,7 @@ include/irrlichtmt/IRandomizer.h
 include/irrlichtmt/IReadFile.h
 include/irrlichtmt/IReferenceCounted.h
 include/irrlichtmt/IRenderTarget.h
+include/irrlichtmt/ISceneCollisionManager.h
 include/irrlichtmt/ISceneLoader.h
 include/irrlichtmt/ISceneManager.h
 include/irrlichtmt/ISceneNode.h
