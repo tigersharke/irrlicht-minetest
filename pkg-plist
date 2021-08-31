@@ -115,10 +115,7 @@ include/irrlichtmt/SMaterial.h
 include/irrlichtmt/SMaterialLayer.h
 include/irrlichtmt/SMesh.h
 include/irrlichtmt/SMeshBuffer.h
-include/irrlichtmt/SMeshBufferLightMap.h
-include/irrlichtmt/SMeshBufferTangents.h
 include/irrlichtmt/SOverrideMaterial.h
-include/irrlichtmt/SParticle.h
 include/irrlichtmt/SSharedMeshBuffer.h
 include/irrlichtmt/SSkinMeshBuffer.h
 include/irrlichtmt/SVertexIndex.h
