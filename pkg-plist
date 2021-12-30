@@ -1,4 +1,3 @@
-include/irrlichtmt/CDynamicMeshBuffer.h
 include/irrlichtmt/CIndexBuffer.h
 include/irrlichtmt/CMeshBuffer.h
 include/irrlichtmt/CVertexBuffer.h
@@ -20,11 +19,9 @@ include/irrlichtmt/EPrimitiveTypes.h
 include/irrlichtmt/EReadFileType.h
 include/irrlichtmt/ESceneNodeTypes.h
 include/irrlichtmt/EShaderTypes.h
-include/irrlichtmt/ETerrainElements.h
 include/irrlichtmt/EVertexAttributes.h
 include/irrlichtmt/IAnimatedMesh.h
 include/irrlichtmt/IAnimatedMeshSceneNode.h
-include/irrlichtmt/IAttributeExchangingObject.h
 include/irrlichtmt/IAttributes.h
 include/irrlichtmt/IBillboardSceneNode.h
 include/irrlichtmt/IBoneSceneNode.h
@@ -32,7 +29,6 @@ include/irrlichtmt/ICameraSceneNode.h
 include/irrlichtmt/IContextManager.h
 include/irrlichtmt/ICursorControl.h
 include/irrlichtmt/IDummyTransformationSceneNode.h
-include/irrlichtmt/IDynamicMeshBuffer.h
 include/irrlichtmt/IEventReceiver.h
 include/irrlichtmt/IFileArchive.h
 include/irrlichtmt/IFileList.h
@@ -88,11 +84,9 @@ include/irrlichtmt/IReadFile.h
 include/irrlichtmt/IReferenceCounted.h
 include/irrlichtmt/IRenderTarget.h
 include/irrlichtmt/ISceneCollisionManager.h
-include/irrlichtmt/ISceneLoader.h
 include/irrlichtmt/ISceneManager.h
 include/irrlichtmt/ISceneNode.h
 include/irrlichtmt/ISceneNodeFactory.h
-include/irrlichtmt/ISceneUserDataSerializer.h
 include/irrlichtmt/IShaderConstantSetCallBack.h
 include/irrlichtmt/ISkinnedMesh.h
 include/irrlichtmt/ITexture.h
@@ -109,14 +103,12 @@ include/irrlichtmt/SAnimatedMesh.h
 include/irrlichtmt/SColor.h
 include/irrlichtmt/SExposedVideoData.h
 include/irrlichtmt/SIrrCreationParameters.h
-include/irrlichtmt/SKeyMap.h
 include/irrlichtmt/SLight.h
 include/irrlichtmt/SMaterial.h
 include/irrlichtmt/SMaterialLayer.h
 include/irrlichtmt/SMesh.h
 include/irrlichtmt/SMeshBuffer.h
 include/irrlichtmt/SOverrideMaterial.h
-include/irrlichtmt/SSharedMeshBuffer.h
 include/irrlichtmt/SSkinMeshBuffer.h
 include/irrlichtmt/SVertexIndex.h
 include/irrlichtmt/SVertexManipulator.h
