@@ -120,10 +120,8 @@ include/irrlichtmt/dimension2d.h
 include/irrlichtmt/driverChoice.h
 include/irrlichtmt/exampleHelper.h
 include/irrlichtmt/fast_atof.h
-include/irrlichtmt/heapsort.h
 include/irrlichtmt/irrAllocator.h
 include/irrlichtmt/irrArray.h
-include/irrlichtmt/irrList.h
 include/irrlichtmt/irrMath.h
 include/irrlichtmt/irrString.h
 include/irrlichtmt/irrTypes.h
