@@ -1,5 +1,5 @@
 PORTNAME=	irrlichtMt
-DISTVERSION=	g20220720
+DISTVERSION=	g20220721
 CATEGORIES=	x11-toolkits graphics
 DISTNAME=	${PORTNAME}-${GH_TAGNAME}
 DIST_SUBDIR=	${PORTNAME}
@@ -18,14 +18,14 @@ DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	minetest
 GH_PROJECT=	irrlicht
-GH_TAGNAME=	51f0acb7c1b240c67ed2d89160e0562b267a3a17
+GH_TAGNAME=	ff645cc8764ab3fc79f0e67677a328ba36c35087
 
 CMAKE_ARGS=	-DCMAKE_BUILD_TYPE="MinSizeRel" \
 		-DCUSTOM_MANDIR="${PREFIX}/man" \
 		-DOPENGL_GL_PREFERENCE=GLVND
 
 USE_GL=		gl glu
-USE_XORG=	x11 xxf86vm xcb xext xau xdmcp
+USE_XORG=	x11 xxf86vm xcb xext xau xdmcp xi
 USE_LDCONFIG=	yes
 
 WRKSRC=		${WRKDIR}/irrlicht-${GH_TAGNAME}
