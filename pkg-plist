@@ -104,7 +104,6 @@ include/irrlichtmt/coreutil.h
 include/irrlichtmt/dimension2d.h
 include/irrlichtmt/exampleHelper.h
 include/irrlichtmt/fast_atof.h
-include/irrlichtmt/irrAllocator.h
 include/irrlichtmt/irrArray.h
 include/irrlichtmt/irrMath.h
 include/irrlichtmt/irrString.h
