@@ -67,7 +67,6 @@ include/irrlichtmt/IMeshManipulator.h
 include/irrlichtmt/IMeshSceneNode.h
 include/irrlichtmt/IMeshWriter.h
 include/irrlichtmt/IOSOperator.h
-include/irrlichtmt/IProfiler.h
 include/irrlichtmt/IReadFile.h
 include/irrlichtmt/IReferenceCounted.h
 include/irrlichtmt/IRenderTarget.h
@@ -112,7 +111,6 @@ include/irrlichtmt/irrUString.h
 include/irrlichtmt/irrlicht.h
 include/irrlichtmt/irrpack.h
 include/irrlichtmt/irrunpack.h
-include/irrlichtmt/leakHunter.h
 include/irrlichtmt/line2d.h
 include/irrlichtmt/line3d.h
 include/irrlichtmt/matrix4.h
