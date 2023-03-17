@@ -1,5 +1,5 @@
 PORTNAME=	irrlichtMt
-DISTVERSION=	g20230305
+DISTVERSION=	g20230314
 CATEGORIES=	x11-toolkits graphics
 DISTNAME=	${PORTNAME}-${GH_TAGNAME}
 DIST_SUBDIR=	${PORTNAME}
@@ -18,7 +18,7 @@ DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	minetest
 GH_PROJECT=	irrlicht
-GH_TAGNAME=	1d43ea17ca8ee9a01262e9e34c5c89579b97397f
+GH_TAGNAME=	25a7074c9af510b6d93d8e84309997e45bad094f
 
 CMAKE_ARGS=	-DCMAKE_BUILD_TYPE="MinSizeRel" \
 		-DCUSTOM_MANDIR="${PREFIX}/man" \
@@ -33,12 +33,26 @@ USE_LDCONFIG=	yes
 WRKSRC=		${WRKDIR}/irrlicht-${GH_TAGNAME}
 
 #OPTIONS_DEFINE= EXAMPLES
-
+#
 #EXAMPLES_CMAKE_BOOL=	BUILD_EXAMPLES
 #Provided in directory below, right after make (prior to install), so need more mechanism to build and install them
 #x11-toolkits/irrlicht-minetest/work/irrlicht-master/examples
-
+#
 #valid arguments are:
 #c++11-lib c++11-lang c++14-lang c++17-lang c11 features openmp env nestedfct c++0x gcc-c++11-lib
+#
+#----
+#BUILD_EXAMPLES:BOOL=OFF
+#BUILD_SHARED_LIBS:BOOL=ON
+#CMAKE_BUILD_TYPE:STRING=Release
+#CMAKE_INSTALL_PREFIX:PATH=/usr/local
+#ENABLE_GLES1:BOOL=OFF
+#ENABLE_GLES2:BOOL=OFF
+#ENABLE_OPENGL:BOOL=ON
+#ENABLE_WEBGL1:BOOL=OFF
+#USE_SDL2:BOOL=OFF
+#USE_X11:BOOL=ON
+#USE_XCURSOR:BOOL=OFF
+#USE_XINPUT2:BOOL=ON
 
 .include <bsd.port.mk>
