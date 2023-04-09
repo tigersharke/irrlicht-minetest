@@ -1,5 +1,5 @@
 PORTNAME=	irrlichtMt
-DISTVERSION=	g20230407
+DISTVERSION=	g20230408
 CATEGORIES=	x11-toolkits graphics
 DISTNAME=	${PORTNAME}-${GH_TAGNAME}
 DIST_SUBDIR=	${PORTNAME}
@@ -18,7 +18,7 @@ DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	minetest
 GH_PROJECT=	irrlicht
-GH_TAGNAME=	462657960d9a71de142937cb29e30917d57845af
+GH_TAGNAME=	aa1696a7e6a275e613e7323e7f9553b7b7a0b7e0
 
 CMAKE_ARGS=	-DCMAKE_BUILD_TYPE="MinSizeRel" \
 		-DCUSTOM_MANDIR="${PREFIX}/man" \
@@ -34,7 +34,7 @@ WRKSRC=		${WRKDIR}/irrlicht-${GH_TAGNAME}
 OPTIONS_DEFAULT= OPENGL
 OPTIONS_RADIO=	GRAPHICS
 
-OPTIONS_RADIO_GRAPHICS=	GLES1 GLES2 OPENGL OPENGL3 WEBGL1 SDL2
+OPTIONS_RADIO_GRAPHICS=	GLES1 GLES2 OPENGL WEBGL1 #SDL2
 
 GLES1_DESC=	Enable GLES1 (broken?)
 GLES1_CMAKE_BOOL=ENABLE_GLES1
@@ -44,19 +44,24 @@ GLES2_DESC=	Enable GLES2 (broken?)
 GLES2_CMAKE_BOOL=ENABLE_GLES2
 GLES_USE=	GL+=glesv2
 
-OPENGL_DESC=	Enable OPENGL -- works!
+# If we had two versions of OpenGL available, this would matter.
+OPENGL_DESC=	Enable OPENGL
 OPENGL_CMAKE_BOOL=ENABLE_OPENGL
 OPENGL_USE=	GL+=gl
 
-OPENGL3_DESC=	Enable OPENGL3 (not distinguished? Unavailable?)
-OPENGL3_CMAKE_BOOL=ENABLE_OPENGL3
+# Our version of OpenGL was 3.2 as of 2016.
+# Something is crossed-up witn cmake or upstream config, expects sdl with opengl3
+#OPENGL3_DESC=	Enable OPENGL3
+#OPENGL3_CMAKE_BOOL=ENABLE_OPENGL3
+#OPENGL3_USE=	GL+=gl
 
 WEBGL1_DESC=	Enable WEBGL1 (incomplete)
 WEBGL1_CMAKE_BOOL=ENABLE_WEBGL1
 
-SDL2_DESC=	Enable SDL2 (unsupported by minetest?)
-SDL2_CMAKE_BOOL=ENABLE_SDL2
-SDL2_USE=	sdl2 gfx2
+# Whoops, boolean in prior commit was wrong here.
+#SDL2_DESC=	Enable SDL2
+#SDL2_CMAKE_BOOL=USE_SDL2
+#SDL2_USE=	sdl2
 #
 #EXAMPLES_CMAKE_BOOL=	BUILD_EXAMPLES
 #Provided in directory below, right after make (prior to install), so need more mechanism to build and install them
