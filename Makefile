@@ -1,5 +1,5 @@
 PORTNAME=	irrlichtMt
-DISTVERSION=	g20230408
+DISTVERSION=	g20230411
 CATEGORIES=	x11-toolkits graphics
 DISTNAME=	${PORTNAME}-${GH_TAGNAME}
 DIST_SUBDIR=	${PORTNAME}
@@ -18,11 +18,12 @@ DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	minetest
 GH_PROJECT=	irrlicht
-GH_TAGNAME=	aa1696a7e6a275e613e7323e7f9553b7b7a0b7e0
+GH_TAGNAME=	7a3fc62ada4001d5bb6c97ed26ec19a4e7c9d9ac
 
 CMAKE_ARGS=	-DCMAKE_BUILD_TYPE="MinSizeRel" \
 		-DCUSTOM_MANDIR="${PREFIX}/man" \
-		-DOPENGL_xmesa_INCLUDE_DIR="${PREFIX}/lib"
+		-DOPENGL_xmesa_INCLUDE_DIR="${PREFIX}/lib" \
+		-DWARN_ALL="TRUE"
 
 USE_GL=		glu egl
 USE_XORG=	x11 xxf86vm xcb xext xau xdmcp xi
@@ -50,7 +51,7 @@ OPENGL_CMAKE_BOOL=ENABLE_OPENGL
 OPENGL_USE=	GL+=gl
 
 # Our version of OpenGL was 3.2 as of 2016.
-# Something is crossed-up witn cmake or upstream config, expects sdl with opengl3
+# Something is crossed-up with cmake or upstream config, expects sdl with opengl3
 #OPENGL3_DESC=	Enable OPENGL3
 #OPENGL3_CMAKE_BOOL=ENABLE_OPENGL3
 #OPENGL3_USE=	GL+=gl
