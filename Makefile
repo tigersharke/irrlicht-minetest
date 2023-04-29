@@ -1,5 +1,5 @@
 PORTNAME=	irrlichtMt
-DISTVERSION=	g20230424
+DISTVERSION=	g20230429
 CATEGORIES=	x11-toolkits graphics
 DISTNAME=	${PORTNAME}-${GH_TAGNAME}
 DIST_SUBDIR=	${PORTNAME}
@@ -18,7 +18,7 @@ DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	minetest
 GH_PROJECT=	irrlicht
-GH_TAGNAME=	1f15fd0805766b0ef87c894a06d2aba6cba66f7b
+GH_TAGNAME=	1387370260330a4c8500634c8c24cc699639d039
 
 CMAKE_ARGS=	-DCMAKE_BUILD_TYPE="MinSizeRel" \
 		-DCUSTOM_MANDIR="${PREFIX}/man" \
@@ -78,7 +78,7 @@ XINPUT_USE=	XORG=xi
 
 pre-install:
 	@${ECHO_MSG} " "
-	@${ECHO_MSG} "-->  "Options marked as testing may cause build to fail, may not function if built. "
+	@${ECHO_MSG} "-->   Options marked as testing may cause build to fail, may not function if built. "
 	@${ECHO_MSG} " "
 
 #valid arguments are:
