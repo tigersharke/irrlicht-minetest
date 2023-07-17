@@ -11,7 +11,7 @@ include/irrlichtmt/EFocusFlags.h
 include/irrlichtmt/EGUIAlignment.h
 include/irrlichtmt/EGUIElementTypes.h
 include/irrlichtmt/EHardwareBufferFlags.h
-include/irrlichtmt/EMaterialFlags.h
+include/irrlichtmt/EMaterialProps.h
 include/irrlichtmt/EMaterialTypes.h
 include/irrlichtmt/EMeshWriterEnums.h
 include/irrlichtmt/EPrimitiveTypes.h
