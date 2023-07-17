@@ -11,6 +11,7 @@ LICENSE=	ZLIB
 
 LIB_DEPENDS=	libpng.so:graphics/png
 
+BROKEN=		this version is newer than client and not yet compatible
 USES=		alias cmake compiler:c11 dos2unix jpeg gl xorg sdl
 
 DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
