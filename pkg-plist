@@ -128,4 +128,4 @@ lib/cmake/IrrlichtMt/IrrlichtMtConfigVersion.cmake
 lib/cmake/IrrlichtMt/IrrlichtMtTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/IrrlichtMt/IrrlichtMtTargets.cmake
 lib/libIrrlichtMt.so
-lib/libIrrlichtMt.so.1.9.0.11
+lib/libIrrlichtMt.so.1.9.0.12
