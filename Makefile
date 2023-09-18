@@ -9,8 +9,8 @@ COMMENT=	High performance realtime 3D engine - minetest fork
 
 LICENSE=	ZLIB
 
-LIB_DEPENDS=	libpng.so:graphics/png \
-		libOpenGL.so:graphics/libglvnd
+LIB_DEPENDS=	libpng.so:graphics/png #\
+#		libOpenGL.so:graphics/libglvnd
 BUILD_DEPENDS=	${LOCALBASE}/include/glm/glm.hpp:math/glm
 
 USES=		alias cmake compiler:c11 dos2unix jpeg gl xorg sdl
@@ -30,7 +30,7 @@ CMAKE_ARGS=	-DCMAKE_BUILD_TYPE="MinSizeRel" \
 		-DUSE_X11="ON" \
 		-DUSE_SDL2="ON"
 
-USE_GL=		glu egl glew
+USE_GL=		glu egl
 USE_SDL+=	sdl2
 USE_XORG=	x11 xxf86vm xcb xext xau xdmcp
 USE_LDCONFIG=	yes
@@ -57,7 +57,8 @@ OPENGL_CMAKE_BOOL=	ENABLE_OPENGL
 OPENGL_USE=		GL+=gl
 
 # Our version of OpenGL was 3.2 as of 2016 but this does not yet build.
-# Their future default, the actual difference within irrlichtMt is unknown.
+# Their default *hid behind* SDL2, the actual difference within irrlichtMt is unknown.
+# https://github.com/minetest/irrlicht/commit/b89455f3851e372b93acba4eb2162635aa2301b5
 OPENGL3_DESC=		Support OPENGL3 --Broken--
 OPENGL3_CMAKE_BOOL=	ENABLE_OPENGL3
 OPENGL3_USE=		GL+=gl
