@@ -1,5 +1,5 @@
 PORTNAME=	irrlichtMt
-DISTVERSION=	g20230913
+DISTVERSION=	g20230917
 CATEGORIES=	x11-toolkits graphics
 DISTNAME=	${PORTNAME}-${GH_TAGNAME}
 DIST_SUBDIR=	${PORTNAME}
@@ -9,7 +9,9 @@ COMMENT=	High performance realtime 3D engine - minetest fork
 
 LICENSE=	ZLIB
 
-LIB_DEPENDS=	libpng.so:graphics/png
+LIB_DEPENDS=	libpng.so:graphics/png \
+		libOpenGL.so:graphics/libglvnd
+BUILD_DEPENDS=	${LOCALBASE}/include/glm/glm.hpp:math/glm
 
 USES=		alias cmake compiler:c11 dos2unix jpeg gl xorg sdl
 
@@ -18,15 +20,17 @@ DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	minetest
 GH_PROJECT=	irrlicht
-GH_TAGNAME=	679dfd33437ecb265cbe64d3663d9afe989e63d2
+GH_TAGNAME=	b89455f3851e372b93acba4eb2162635aa2301b5
 
 CMAKE_ARGS=	-DCMAKE_BUILD_TYPE="MinSizeRel" \
 		-DCUSTOM_MANDIR="${PREFIX}/man" \
 		-DOPENGL_xmesa_INCLUDE_DIR="${PREFIX}/lib" \
 		-DWARN_ALL="TRUE" \
+		-DBUILD_SHARED_LIBS="ON" \
+		-DUSE_X11="ON" \
 		-DUSE_SDL2="ON"
 
-USE_GL=		glu egl
+USE_GL=		glu egl glew
 USE_SDL+=	sdl2
 USE_XORG=	x11 xxf86vm xcb xext xau xdmcp
 USE_LDCONFIG=	yes
@@ -47,13 +51,14 @@ GLES2_DESC=		Enable GLES2 (testing)
 GLES2_CMAKE_BOOL=	ENABLE_GLES2
 GLES_USE=		GL+=glesv2
 
-# If we had two versions of OpenGL available, this would matter.
-OPENGL_DESC=		Enable OPENGL
+# If we had two versions of OpenGL available, this would matter more.
+OPENGL_DESC=		Support OPENGL (<3.x)
 OPENGL_CMAKE_BOOL=	ENABLE_OPENGL
 OPENGL_USE=		GL+=gl
 
-# Our version of OpenGL was 3.2 as of 2016.
-OPENGL3_DESC=		Enable OPENGL3 --BROKEN--
+# Our version of OpenGL was 3.2 as of 2016 but this does not yet build.
+# Their future default, the actual difference within irrlichtMt is unknown.
+OPENGL3_DESC=		Support OPENGL3 --Broken--
 OPENGL3_CMAKE_BOOL=	ENABLE_OPENGL3
 OPENGL3_USE=		GL+=gl
 
