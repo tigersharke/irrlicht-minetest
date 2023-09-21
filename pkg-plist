@@ -1,6 +1,4 @@
-include/irrlichtmt/CIndexBuffer.h
 include/irrlichtmt/CMeshBuffer.h
-include/irrlichtmt/CVertexBuffer.h
 include/irrlichtmt/EAttributes.h
 include/irrlichtmt/ECullingTypes.h
 include/irrlichtmt/EDebugSceneTypes.h
