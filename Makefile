@@ -1,5 +1,5 @@
 PORTNAME=	irrlichtMt
-DISTVERSION=	g20230920
+DISTVERSION=	g20230926
 CATEGORIES=	x11-toolkits graphics
 DISTNAME=	${PORTNAME}-${GH_TAGNAME}
 DIST_SUBDIR=	${PORTNAME}
@@ -13,14 +13,15 @@ LIB_DEPENDS=	libpng.so:graphics/png #\
 #		libOpenGL.so:graphics/libglvnd
 BUILD_DEPENDS=	${LOCALBASE}/include/glm/glm.hpp:math/glm
 
-USES=		alias cmake compiler:c11 dos2unix jpeg gl xorg sdl
+# match the requirement for minetest compiler features.
+USES=		alias cmake compiler:c++20-lang dos2unix jpeg gl xorg sdl
 
 DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
 
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	minetest
 GH_PROJECT=	irrlicht
-GH_TAGNAME=	d8a21cb25f19b05c76d0186aa0f0270d19c8b50a
+GH_TAGNAME=	cfb73d07d7248ef3dd3876f139a59d568244968e
 
 CMAKE_ARGS=	-DCMAKE_BUILD_TYPE="MinSizeRel" \
 		-DCUSTOM_MANDIR="${PREFIX}/man" \
@@ -84,9 +85,6 @@ pre-install:
 	@${ECHO_MSG} "-->   Options marked as testing may cause build to fail, may not function if built. "
 	@${ECHO_MSG} " "
 
-#valid arguments are:
-#c++11-lib c++11-lang c++14-lang c++17-lang c11 features openmp env nestedfct c++0x gcc-c++11-lib
-#
 #----
 #BUILD_EXAMPLES:BOOL=OFF
 #BUILD_SHARED_LIBS:BOOL=ON
