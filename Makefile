@@ -21,7 +21,7 @@ DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	minetest
 GH_PROJECT=	irrlicht
-GH_TAGNAME=	c766c3a023e52a31a0a0aeee1780e0000aabaec4
+GH_TAGNAME=	631c0fa77b979c14f3238524b5c2cabfb77ef2d0
 
 CMAKE_ARGS=	-DCMAKE_BUILD_TYPE="MinSizeRel" \
 		-DCUSTOM_MANDIR="${PREFIX}/man" \
