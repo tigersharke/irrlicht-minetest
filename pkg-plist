@@ -105,7 +105,6 @@ include/irrlichtmt/irrArray.h
 include/irrlichtmt/irrMath.h
 include/irrlichtmt/irrString.h
 include/irrlichtmt/irrTypes.h
-include/irrlichtmt/irrUString.h
 include/irrlichtmt/irrlicht.h
 include/irrlichtmt/irrpack.h
 include/irrlichtmt/irrunpack.h
