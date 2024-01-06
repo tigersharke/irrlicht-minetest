@@ -1,5 +1,5 @@
 PORTNAME=	irrlichtMt
-DISTVERSION=	g20231219
+DISTVERSION=	g20240104
 CATEGORIES=	x11-toolkits graphics
 DISTNAME=	${PORTNAME}-${GH_TAGNAME}
 DIST_SUBDIR=	${PORTNAME}
@@ -14,14 +14,15 @@ LIB_DEPENDS=	libpng.so:graphics/png #\
 BUILD_DEPENDS=	${LOCALBASE}/include/glm/glm.hpp:math/glm
 
 # match the requirement for minetest compiler features.
-USES=		alias cmake compiler:c++20-lang dos2unix jpeg gl xorg sdl
+USES=		alias cmake dos2unix jpeg gl xorg sdl llvm:max=16
+#USES=		alias cmake compiler:c++20-lang dos2unix jpeg gl xorg sdl
 
 DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
 
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	minetest
 GH_PROJECT=	irrlicht
-GH_TAGNAME=	03dd8b0336d041726dbec5e47dc8bfcbcf858767
+GH_TAGNAME=	91e41296152e7a54dedaba57531cf509311dfc43
 
 CMAKE_ARGS=	-DCMAKE_BUILD_TYPE="MinSizeRel" \
 		-DCUSTOM_MANDIR="${PREFIX}/man" \
