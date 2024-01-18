@@ -1,5 +1,5 @@
 PORTNAME=	irrlichtMt
-DISTVERSION=	g20240113
+DISTVERSION=	g20240116
 CATEGORIES=	x11-toolkits graphics
 DISTNAME=	${PORTNAME}-${GH_TAGNAME}
 DIST_SUBDIR=	${PORTNAME}
@@ -14,7 +14,7 @@ LIB_DEPENDS=	libpng.so:graphics/png #\
 BUILD_DEPENDS=	${LOCALBASE}/include/glm/glm.hpp:math/glm
 
 # match the requirement for minetest compiler features.
-USES=		alias cmake dos2unix jpeg gl xorg sdl llvm:max=16
+USES=		alias cmake dos2unix jpeg gl xorg sdl llvm:min=16 pkgconfig:build
 #USES=		alias cmake compiler:c++20-lang dos2unix jpeg gl xorg sdl
 
 DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
@@ -22,8 +22,9 @@ DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	minetest
 GH_PROJECT=	irrlicht
-GH_TAGNAME=	a3ec3a88e8c87c97d21dfaba77b426f4ab498bd2
+GH_TAGNAME=	ee2467d622400ac7535672adafe9d7c8228c9997
 
+CXXFLAGS +=	$$(freetype-config --cflags)
 CMAKE_ARGS=	-DCMAKE_BUILD_TYPE="MinSizeRel" \
 		-DCUSTOM_MANDIR="${PREFIX}/man" \
 		-DOPENGL_xmesa_INCLUDE_DIR="${PREFIX}/lib" \
@@ -33,7 +34,7 @@ CMAKE_ARGS=	-DCMAKE_BUILD_TYPE="MinSizeRel" \
 		-DUSE_SDL2="ON"
 
 USE_GL=		glu egl
-USE_SDL+=	sdl2
+USE_SDL=	sdl2 ttf2
 USE_XORG=	x11 xxf86vm xcb xext xau xdmcp
 USE_LDCONFIG=	yes
 
