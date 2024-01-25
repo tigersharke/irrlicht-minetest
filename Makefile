@@ -1,5 +1,5 @@
 PORTNAME=	irrlichtMt
-DISTVERSION=	g20240121
+DISTVERSION=	g20240122
 CATEGORIES=	x11-toolkits graphics
 DISTNAME=	${PORTNAME}-${GH_TAGNAME}
 DIST_SUBDIR=	${PORTNAME}
@@ -22,7 +22,7 @@ DOS2UNIX_GLOB=	*.cpp *.h *.txt Makefile
 USE_GITHUB=	nodefault
 GH_ACCOUNT=	minetest
 GH_PROJECT=	irrlicht
-GH_TAGNAME=	5b81694b1d9a54801b5d6322c8b1f6daa946112e
+GH_TAGNAME=	4299ee21d8c0e4fb361e1042bda1a0a9ddbeb60e
 
 CXXFLAGS +=	$$(freetype-config --cflags)
 CMAKE_ARGS=	-DCMAKE_BUILD_TYPE="MinSizeRel" \
