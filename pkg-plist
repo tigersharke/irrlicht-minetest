@@ -11,7 +11,6 @@ include/irrlichtmt/EGUIElementTypes.h
 include/irrlichtmt/EHardwareBufferFlags.h
 include/irrlichtmt/EMaterialProps.h
 include/irrlichtmt/EMaterialTypes.h
-include/irrlichtmt/EMeshWriterEnums.h
 include/irrlichtmt/EPrimitiveTypes.h
 include/irrlichtmt/EReadFileType.h
 include/irrlichtmt/ESceneNodeTypes.h
@@ -63,7 +62,6 @@ include/irrlichtmt/IMeshCache.h
 include/irrlichtmt/IMeshLoader.h
 include/irrlichtmt/IMeshManipulator.h
 include/irrlichtmt/IMeshSceneNode.h
-include/irrlichtmt/IMeshWriter.h
 include/irrlichtmt/IOSOperator.h
 include/irrlichtmt/IReadFile.h
 include/irrlichtmt/IReferenceCounted.h
@@ -117,7 +115,6 @@ include/irrlichtmt/plane3d.h
 include/irrlichtmt/position2d.h
 include/irrlichtmt/quaternion.h
 include/irrlichtmt/rect.h
-include/irrlichtmt/triangle3d.h
 include/irrlichtmt/vector2d.h
 include/irrlichtmt/vector3d.h
 lib/cmake/IrrlichtMt/IrrlichtMtConfig.cmake
