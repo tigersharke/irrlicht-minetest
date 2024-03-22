@@ -1,5 +1,5 @@
 PORTNAME=				irrlichtMt
-DISTVERSION=			g20240317
+DISTVERSION=			g20240321
 CATEGORIES=				x11-toolkits graphics
 DISTNAME=				${PORTNAME}-${GH_TAGNAME}
 DIST_SUBDIR=			${PORTNAME}
@@ -20,7 +20,7 @@ DOS2UNIX_GLOB=			*.cpp *.h *.txt Makefile
 USE_GITHUB=				nodefault
 GH_ACCOUNT=				minetest
 GH_PROJECT=				irrlicht
-GH_TAGNAME=				a9c4683b18af5c90ff1228de7c40df9c35b7a3fb
+GH_TAGNAME=				124708784fdc4321d5983cdbfb889e62fbd25f40
 USE_GL=					glu egl
 USE_LDCONFIG=			yes
 USE_SDL=				sdl2 ttf2
